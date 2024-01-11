@@ -121,10 +121,6 @@ header .container {
     letter-spacing: -0.02em;
 }
 
-/* .icons-nav-container {
-    margin-left: auto;
-} */
-
 .list-icons-nav {
     display: flex;
     align-items: center;
@@ -200,6 +196,7 @@ header .container {
 
 .how {
     background-color: transparent;
+    border: 1px solid #FFF;
 }
 
 .scroll {
@@ -272,16 +269,17 @@ header .container {
     flex-direction: column;
     width: calc((100% - 176px) / 3);
     flex-shrink: 0;
+    /* padding-right: 18px; */
 }
 
 .decor {
-    position: relative;
+    position:relative;
 }
 
-.item-benefits.decor::after {
+.decor::after {
     content: '';
     position: absolute;
-    top: 35%;
+    top: 25%;
     right: -18px;
     display: block;
     width: 1px;
@@ -289,22 +287,6 @@ header .container {
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.50);
 }
-
-/* .decor-two {
-    position: relative;
-}
-
-.second.decor-two::after {
-    content: '';
-    position: absolute;
-    top: 35%;
-    right: -18px;
-    display: block;
-    width: 1px;
-    height: 124px;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.50);
-} */
 
 .icon-benefits-container {
     display: flex;
@@ -418,6 +400,84 @@ header .container {
     color: #fff;
 }
 
+.overley-tastes {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: #FFF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title-cards {
+    color: #111;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.button-cards {
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 35px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.2; 
+    margin-bottom: 14px;
+}
+
+.orange {
+    background: #FD9222;
+    border: 1px solid transparent;
+    color: #FFF;
+
+}
+
+.white {
+    border: 1px solid #FD9222;
+    background: #FAFAFA;
+}
+
+.paragraph-cards {
+    width: 230px;
+    height: 162px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #111;
+    width: 230px;
+    height: 162px;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29; 
+    letter-spacing: -0.02em;
+}
+
 /* ============== How it`s made =============== */
 
 .recept {
@@ -437,6 +497,7 @@ header .container {
 }
 
 .title-recept {
+    width: 350px;
     color: #111;
     font-size: 18px;
     font-weight: 600;
@@ -448,6 +509,7 @@ header .container {
     flex-direction: column;
     align-items: flex-start;
     width: 516px;
+    height: 336px;
     gap: 28px;
     padding: 32px;
 }
@@ -457,6 +519,15 @@ header .container {
     flex-direction: column;
     list-style-type: inherit;
     gap: 24px;
+    padding-left: 16px;
+}
+
+.paragraph-item-recept {
+    color: #111;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29; 
+    letter-spacing: -0.02em;
 }
 
 /* =============== Reviews =============== */
@@ -495,6 +566,10 @@ header .container {
     top: -5%;
     left: 12%;
     transform: translate(-50%, -50%) scale(1);
+}
+
+.names {
+    text-align: center;
 }
 
 .paragraf-reviews {
@@ -542,6 +617,7 @@ header .container {
     justify-content: center;
     align-items: center;
     gap: 358px;
+    margin-top: 24px;
 }
 
 .title-bottom {
@@ -582,13 +658,12 @@ header .container {
 
 .line {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.10);
 }
 
 .line::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 70%;
     left: 0;
     bottom: 0;
     display: block;
@@ -598,3 +673,43 @@ header .container {
     background-color: rgba(255, 255, 255, 0.10);
 }
 
+.form-bottom {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.subscribe {
+    display: flex;
+}
+
+.email-bottom {
+    background-color: transparent;
+    width: 313px;
+    height: 52px;
+    padding: 14px 24px;
+    align-items: flex-start;
+    border-radius: 30px;
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.30);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.02em;
+}
+
+.button-bottom {
+    display: flex;
+    width: 137px;
+    height: 52px;
+    padding: 17px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 100px;
+    background: #FD9222;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
